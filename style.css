@@ -1,0 +1,57 @@
+* { font-family: 'Inter', sans-serif; }
+.gradient-text { background: linear-gradient(135deg, #ff6b35, #f7931e, #8a2be2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.gradient-bg { background: linear-gradient(135deg, #ff6b35, #f7931e, #8a2be2); }
+.gradient-border { border-image: linear-gradient(135deg, #ff6b35, #f7931e, #8a2be2) 1; }
+.hero-bg { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); }
+.card-hover { transition: all 0.3s ease; }
+.card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.pulse-animation { animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+.pricing-popular { position: relative; overflow: visible; margin-top: 2rem; }
+.pricing-popular::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #ff6b35, #f7931e, #8a2be2); }
+.scroll-smooth { scroll-behavior: smooth; }
+.popular-badge { 
+    background: linear-gradient(45deg, #3B82F6, #1D4ED8); 
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.6);
+    font-weight: 700;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.2);
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    white-space: nowrap;
+}
+
+/* Animation des trois points */
+.typing-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.typing-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff6b35, #f7931e, #8a2be2);
+    margin: 0 3px;
+    animation: typing 1.5s infinite ease-in-out;
+}
+
+.typing-dots .dot:nth-child(1) { animation-delay: 0s; }
+.typing-dots .dot:nth-child(2) { animation-delay: 0.3s; }
+.typing-dots .dot:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    30% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
