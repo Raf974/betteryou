@@ -37,3 +37,15 @@ mobileMenuButton?.addEventListener('click', function() {
     // Logique menu mobile
     console.log('Menu mobile cliqué');
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const calendlyLink = document.getElementById('calendly-link');
+
+    if (!calendlyLink) {
+        return;
+    }
+
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    calendlyLink.href = `https://calendly.com/agencebetteryou/60min?month=${now.getFullYear()}-${month}`;
+});
